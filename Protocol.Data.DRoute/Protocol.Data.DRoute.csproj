@@ -1,0 +1,86 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="14.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{3BE5428A-4A4F-408E-A4CD-37ABCD5FC90D}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>Protocol.Data.DRoute</RootNamespace>
+    <AssemblyName>Protocol.Data.DRoute</AssemblyName>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>..\..\..\bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Entity">
+      <HintPath>..\..\..\bin\Debug\Entity.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="DownParse.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\Protocol.Data.DWXY\Protocol.Data.DWXY.csproj">
+      <Project>{a52d683d-214b-4e12-970b-79f6adfad06a}</Project>
+      <Name>Protocol.Data.DWXY</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Protocol.Data.Interface\Protocol.Data.Interface.csproj">
+      <Project>{d8a6fc21-b411-4e95-87ed-982be8654252}</Project>
+      <Name>Protocol.Data.Interface</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Protocol.Data.RG30\Protocol.Data.RG30.csproj">
+      <Project>{651587df-5546-460d-94ed-2b694c9e83d5}</Project>
+      <Name>Protocol.Data.RG30</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Protocol.Data.SM100H\Protocol.Data.SM100H.csproj">
+      <Project>{73a7a6c5-2645-4663-979e-5b6dbf8d8ba2}</Project>
+      <Name>Protocol.Data.SM100H</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Protocol.Data.TDXY\Protocol.Data.TDXY.csproj">
+      <Project>{c1a9688d-700b-4863-bb47-5b2281686355}</Project>
+      <Name>Protocol.Data.TDXY</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Protocol.Data.ZYJBX\Protocol.Data.ZYJBX.csproj">
+      <Project>{a0ad42d3-79da-44c8-a475-6a3e360fcdce}</Project>
+      <Name>Protocol.Data.ZYJBX</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Protocol.Manager\Protocol.Manager.csproj">
+      <Project>{5de5aa83-1f6d-45fb-be29-cd88235a2701}</Project>
+      <Name>Protocol.Manager</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>
